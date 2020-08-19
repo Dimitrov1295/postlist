@@ -1,0 +1,40 @@
+{
+  "name": "postlist",
+  "version": "1.0.0",
+  "description": "Displays a list of posts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ivan Dimitrov",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "babel-loader": "^8.1.0",
+    "bootstrap": "^4.5.2",
+    "css-loader": "^4.2.1",
+    "fontawesome": "^5.6.3",
+    "jquery": "^3.5.1",
+    "net": "^1.0.2",
+    "react-bootstrap": "^1.3.0",
+    "react-dom": "^16.13.1",
+    "react-image-lightbox": "^5.1.1",
+    "react-images-upload": "^1.2.8",
+    "react-router-dom": "^5.2.0",
+    "sockjs-client": "^1.5.0",
+    "stompjs": "^2.3.3",
+    "style-loader": "^1.2.1",
+    "svg-inline-loader": "^0.8.2",
+    "toastr": "^2.1.4",
+    "uuid": "^8.3.0"
+  }
+}

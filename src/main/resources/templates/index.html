@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo</title>
+    <!-- <link rel="shortcut icon" type="image/png" th:href="@{favicon.png}" /> -->
+  </head>
+  <body>
+    <div id="react"></div>
+
+    <!-- VARIABLES -->
+    <script th:inline="javascript">
+      /*<![CDATA[*/
+      let username = /*[[${#authentication.name}]]*/ undefined;
+      let root = "/api";
+      /*]]>*/
+    </script>
+
+    <script src="built/bundle.js"></script>
+  </body>
+</html>
