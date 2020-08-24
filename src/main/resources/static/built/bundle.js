@@ -73569,7 +73569,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var root = "/api";
 
 var App = /*#__PURE__*/function (_React$Component) {
   _inherits(App, _React$Component);
@@ -75153,7 +75152,7 @@ var UpdateDialog = /*#__PURE__*/function (_React$Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "onDrop", function (pictures) {
-      alert("Functionality not enabled for this demo, but can be enabled by uncommenting the function and \"FileUploadController.java\"."); // this.state.data = new FormData();
+      alert('Functionality not enabled for this demo, but can be enabled by uncommenting the function and "FileUploadController.java".'); // this.state.data = new FormData();
       // let path = "";
       // let oldImages = this.props.post.images;
       // if (oldImages.length > 0 && oldImages[0].includes("images/")) {
@@ -75241,7 +75240,7 @@ var UpdateDialog = /*#__PURE__*/function (_React$Component) {
         onClick: function onClick(e) {
           e.preventDefault();
 
-          _this2.onHide();
+          _this2.props.onHide();
         }
       }, "Close")));
     }

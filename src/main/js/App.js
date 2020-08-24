@@ -12,8 +12,6 @@ import PostContainer from "./post/PostContainer";
 import follow from "./util/follow";
 import stompClient from "./util/websocket-listener";
 
-let root = "/api";
-
 class App extends React.Component {
   constructor(props) {
     super(props);

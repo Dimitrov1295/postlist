@@ -54,7 +54,7 @@ class UpdateDialog extends React.Component {
 
   onDrop = (pictures) => {
     alert(
-      "Functionality not enabled for this demo, but can be enabled by uncommenting the function and \"FileUploadController.java\"."
+      'Functionality not enabled for this demo, but can be enabled by uncommenting the function and "FileUploadController.java".'
     );
     // this.state.data = new FormData();
     // let path = "";
@@ -121,7 +121,7 @@ class UpdateDialog extends React.Component {
           <Button
             onClick={(e) => {
               e.preventDefault();
-              this.onHide();
+              this.props.onHide();
             }}
           >
             Close

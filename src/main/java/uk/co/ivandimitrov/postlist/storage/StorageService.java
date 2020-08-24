@@ -8,16 +8,16 @@ import org.springframework.web.multipart.MultipartFile;
 
 public interface StorageService {
 
-    void init();
+	void init();
 
-    void store(MultipartFile file, String path);
+	void store(MultipartFile file, String path);
 
-    Stream<Path> loadAll();
+	Stream<Path> loadAll();
 
-    Path load(String filename);
+	Path load(String filename);
 
-    Resource loadAsResource(String filename);
+	Resource loadAsResource(String filename);
 
-    void deleteAll(String path);
+	void deleteAll(String path);
 
 }

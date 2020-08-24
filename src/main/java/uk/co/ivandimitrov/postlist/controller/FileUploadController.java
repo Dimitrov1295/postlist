@@ -16,21 +16,22 @@
 // @RequestMapping(value = "/storage")
 // public class FileUploadController {
 
-//     private StorageService storageService;
+// private StorageService storageService;
 
-//     @Autowired
-//     public FileUploadController(StorageService storageService) {
-//         this.storageService = storageService;
-//     }
+// @Autowired
+// public FileUploadController(StorageService storageService) {
+// this.storageService = storageService;
+// }
 
-//     @PostMapping(value = "/upload")
-//     @ResponseBody
-//     public ResponseEntity<HttpStatus> storeFiles(@RequestParam(value = "files") MultipartFile[] files,
-//             @RequestParam(value = "path") String path) {
-//         for (MultipartFile file : files) {
-//             storageService.store(file, path);
-//         }
-//         return new ResponseEntity<>(HttpStatus.OK);
+// @PostMapping(value = "/upload")
+// @ResponseBody
+// public ResponseEntity<HttpStatus> storeFiles(@RequestParam(value = "files")
+// MultipartFile[] files,
+// @RequestParam(value = "path") String path) {
+// for (MultipartFile file : files) {
+// storageService.store(file, path);
+// }
+// return new ResponseEntity<>(HttpStatus.OK);
 
-//     }
+// }
 // }

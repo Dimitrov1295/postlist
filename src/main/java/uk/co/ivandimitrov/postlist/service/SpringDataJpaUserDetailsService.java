@@ -13,17 +13,17 @@ import uk.co.ivandimitrov.postlist.model.UserRepository;
 @Component
 public class SpringDataJpaUserDetailsService implements UserDetailsService {
 
-    private final UserRepository repository;
+	private final UserRepository repository;
 
-    @Autowired
-    public SpringDataJpaUserDetailsService(UserRepository repository) {
-        this.repository = repository;
-    }
+	@Autowired
+	public SpringDataJpaUserDetailsService(UserRepository repository) {
+		this.repository = repository;
+	}
 
-    @Override
-    public UserDetails loadUserByUsername(String name) throws UsernameNotFoundException {
-        uk.co.ivandimitrov.postlist.model.User agent = this.repository.findById(name).get();
-        return new User(agent.getName(), agent.getPassword(), AuthorityUtils.createAuthorityList(agent.getRoles()));
-    }
+	@Override
+	public UserDetails loadUserByUsername(String name) throws UsernameNotFoundException {
+		uk.co.ivandimitrov.postlist.model.User agent = this.repository.findById(name).get();
+		return new User(agent.getName(), agent.getPassword(), AuthorityUtils.createAuthorityList(agent.getRoles()));
+	}
 
 }

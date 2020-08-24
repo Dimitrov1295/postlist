@@ -15,25 +15,26 @@ import uk.co.ivandimitrov.postlist.model.Post;
 @RepositoryEventHandler(User.class)
 public class SpringDataRestEventHandler {
 
-    private final UserRepository userRepository;
+	private final UserRepository userRepository;
 
-    @Autowired
-    public SpringDataRestEventHandler(UserRepository managerRepository) {
-        this.userRepository = managerRepository;
-    }
+	@Autowired
+	public SpringDataRestEventHandler(UserRepository managerRepository) {
+		this.userRepository = managerRepository;
+	}
 
-    @HandleBeforeCreate
-    @HandleBeforeSave
-    public void applyUserInformationUsingSecurityContext(Post post) {
+	@HandleBeforeCreate
+	@HandleBeforeSave
+	public void applyUserInformationUsingSecurityContext(Post post) {
 
-        String name = SecurityContextHolder.getContext().getAuthentication().getName();
-        User user = this.userRepository.findById(name).orElseThrow();
-        if (user == null) {
-            User newUser = new User();
-            newUser.setName(name);
-            newUser.setRoles(new String[] { "ROLE_USER" });
-            user = this.userRepository.save(newUser);
-        }
-        post.setUser(user);
-    }
+		String name = SecurityContextHolder.getContext().getAuthentication().getName();
+		User user = this.userRepository.findById(name).orElseThrow();
+		if (user == null) {
+			User newUser = new User();
+			newUser.setName(name);
+			newUser.setRoles(new String[] { "ROLE_USER" });
+			user = this.userRepository.save(newUser);
+		}
+		post.setUser(user);
+	}
+
 }

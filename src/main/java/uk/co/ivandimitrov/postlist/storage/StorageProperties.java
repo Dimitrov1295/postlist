@@ -10,9 +10,9 @@ import lombok.Setter;
 @ConfigurationProperties("storage")
 public class StorageProperties {
 
-    /**
-     * Folder location for storing files
-     */
-    private String location = "src/main/resources/static/images";
+	/**
+	 * Folder location for storing files
+	 */
+	private String location = System.getProperty("java.io.tmpdir") + "/src/main/resources/static/images";
 
 }

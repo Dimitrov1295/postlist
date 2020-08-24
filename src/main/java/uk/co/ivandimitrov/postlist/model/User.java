@@ -20,28 +20,31 @@ import lombok.Setter;
 @NoArgsConstructor
 @EqualsAndHashCode
 public class User {
-    public static final PasswordEncoder PASSWORD_ENCODER = PasswordEncoderFactories.createDelegatingPasswordEncoder();
 
-    @Id
-    private String Name;
-    private String[] roles;
-    private String phoneNumber;
+	public static final PasswordEncoder PASSWORD_ENCODER = PasswordEncoderFactories.createDelegatingPasswordEncoder();
 
-    private @JsonIgnore String password;
+	@Id
+	private String Name;
 
-    @Version
-    @JsonIgnore
-    private Long version;
+	private String[] roles;
 
-    public void setPassword(String password) {
-        this.password = PASSWORD_ENCODER.encode(password);
-    }
+	private String phoneNumber;
 
-    public User(String Name, String password, String phoneNumber, String... roles) {
-        this.Name = Name;
-        this.setPassword(password);
-        this.phoneNumber = phoneNumber;
-        this.roles = roles;
-    }
+	private @JsonIgnore String password;
+
+	@Version
+	@JsonIgnore
+	private Long version;
+
+	public void setPassword(String password) {
+		this.password = PASSWORD_ENCODER.encode(password);
+	}
+
+	public User(String Name, String password, String phoneNumber, String... roles) {
+		this.Name = Name;
+		this.setPassword(password);
+		this.phoneNumber = phoneNumber;
+		this.roles = roles;
+	}
 
 }

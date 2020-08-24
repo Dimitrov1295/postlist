@@ -22,28 +22,35 @@ import lombok.Setter;
 @Setter
 @EqualsAndHashCode
 public class Post {
-    @Id
-    @GeneratedValue(generator = "uuid")
-    @GenericGenerator(name = "uuid", strategy = "uuid")
-    private String Id;
-    private String title;
-    private String comment;
-    private Number price;
-    @Column(length = 10000)
-    private String description;
-    private @ManyToOne User User;
-    @Column(length = 10000)
-    private String[] images;
 
-    private @Version @JsonIgnore Long version;
+	@Id
+	@GeneratedValue(generator = "uuid")
+	@GenericGenerator(name = "uuid", strategy = "uuid")
+	private String Id;
 
-    public Post(String title, String address, Double price, String description, User User, String... images) {
-        this.title = title;
-        this.comment = address;
-        this.price = price;
-        this.description = description;
-        this.User = User;
-        this.images = images;
-    }
+	private String title;
+
+	private String comment;
+
+	private Number price;
+
+	@Column(length = 10000)
+	private String description;
+
+	private @ManyToOne User User;
+
+	@Column(length = 10000)
+	private String[] images;
+
+	private @Version @JsonIgnore Long version;
+
+	public Post(String title, String address, Double price, String description, User User, String... images) {
+		this.title = title;
+		this.comment = address;
+		this.price = price;
+		this.description = description;
+		this.User = User;
+		this.images = images;
+	}
 
 }
