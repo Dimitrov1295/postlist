@@ -81,7 +81,6 @@
 			<version>1.18.12</version>
 			<scope>provided</scope>
 		</dependency>
-
 		<!-- LOREM IPSUM -->
 		<dependency>
 			<groupId>com.thedeanda</groupId>
@@ -103,6 +102,11 @@
 		<dependency>
 			<groupId>org.thymeleaf.extras</groupId>
 			<artifactId>thymeleaf-extras-springsecurity5</artifactId>
+		</dependency>
+		<!-- Actuator -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 	</dependencies>
 
