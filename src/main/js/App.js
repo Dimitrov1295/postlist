@@ -3,7 +3,7 @@ import $ from "jquery";
 import React from "react";
 import { Container } from "react-bootstrap";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router } from "react-router-dom";
+import { MemoryRouter as Router } from "react-router-dom";
 import toastr from "toastr";
 import "toastr/build/toastr.min.css";
 import Navbar from "./input/Navbar";
